@@ -1,0 +1,1 @@
+{"version":3,"sources":["vars.ts"],"names":[],"mappings":"AAWC","file":"vars.js","sourcesContent":["interface Window{\r\n\tHandlebars :Object;\r\n\tTPLS :TPLS;\r\n}\r\n\r\ninterface Function{\r\n\tname :string;\r\n}\r\n\r\ninterface TPLS{\r\n\ttemplates :Function;\r\n}"],"sourceRoot":"/source/"}
