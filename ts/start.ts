@@ -14,7 +14,7 @@ window.document.onreadystatechange = function(){
 
 			todo.render({
 				'customClass' : "todo-list"
-			});dsadadasdasdsa
+			});
 		}
 	}
 }
