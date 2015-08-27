@@ -1,6 +1,10 @@
 .todo-list{
 	display: block;
 
+	ul{
+		list-style: none;
+	}
+
 	.btn-default{
 		
 		background-color: #efefef;

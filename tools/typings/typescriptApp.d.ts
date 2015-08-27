@@ -1,4 +1,5 @@
 //{	
+/// <reference path="../../ts/IEvents.ts" />	
 /// <reference path="../../ts/start.ts" />	
 /// <reference path="../../ts/TodoItem.ts" />	
 /// <reference path="../../ts/vars.ts" />	

@@ -1,0 +1,1 @@
+{"version":3,"sources":["IEvents.ts"],"names":[],"mappings":"AAEC","file":"IEvents.js","sourcesContent":["interface IEvents{\r\n\tbinds(): void;\r\n}"],"sourceRoot":"/source/"}

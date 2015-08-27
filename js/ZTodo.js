@@ -9,8 +9,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Todo = (function (_super) {
     __extends(Todo, _super);
     function Todo(config) {
-        _super.call(this);
+        _super.call(this, config);
         this._items = [];
+        this.hash = "";
         this.renderSelector = config.renderSelector;
     }
     Object.defineProperty(Todo.prototype, "items", {
@@ -24,7 +25,28 @@ var Todo = (function (_super) {
         configurable: true
     });
     Todo.prototype.add = function (item) {
+        this.hash += "|" + item.id;
         this._items.push(item);
+    };
+    Todo.prototype.itemExists = function (id) {
+        return this.hash.match(id) === null ? false : true;
+    };
+    Todo.prototype.binds = function () {
+        var dom = this.dom();
+        dom.querySelector('.btn-add-item').addEventListener('click', this.addItem.bind(this), false);
+    };
+    Todo.prototype.addItem = function () {
+        var item = new TodoItem({
+            name: "Validar coisas",
+            renderSelector: ".todo-list ul"
+        });
+        if (!this.itemExists(item.id.toString())) {
+            this.add(item);
+            item.render({
+                'id': item.id,
+                'label': item.name
+            });
+        }
     };
     return Todo;
 })(ViewManager);

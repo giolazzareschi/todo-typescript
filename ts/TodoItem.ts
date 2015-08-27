@@ -1,11 +1,12 @@
-class TodoItem{	
-	constructor( private nm :string ){}
+/// <reference path="ViewManager.ts" />
 
-	get name() :string{
-		return this.nm;
-	}
+class TodoItem extends ViewManager{	
+	public id: number;
+	public name: string;
 
-	set name( nm :string ){
-		this.nm = nm;
+	constructor( config: any ){
+		super( config );
+		this.name = config.name;
+		this.id = Math.ceil(Math.abs(Math.random()*500) * Math.random());		
 	}
 }
